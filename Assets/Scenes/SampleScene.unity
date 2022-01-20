@@ -1283,10 +1283,11 @@ MonoBehaviour:
   networkAddress: localhost
   maxConnections: 100
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 5436986912557069746, guid: dcd4812bcdfa43241ae5a60ee4098db4, type: 3}
+  playerPrefab: {fileID: 4041845767002799106, guid: dcd4812bcdfa43241ae5a60ee4098db4, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 263766049978152285, guid: c4df7623cfbd8e946a6e40d3445c27f4, type: 3}
 --- !u!1 &1488131234
 GameObject:
   m_ObjectHideFlags: 0

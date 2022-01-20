@@ -7,8 +7,11 @@ public class WeaponManager : NetworkBehaviour
 {
     private PlayerPush push;
     private PlayerBat bat;
+    private PlayerBomb bomb;
     [SerializeField]
     private GameObject batModel;
+    [SerializeField]
+    private GameObject bombModel;
     [SerializeField]
     private bool wep1;
     [SerializeField]
@@ -21,8 +24,9 @@ public class WeaponManager : NetworkBehaviour
     {
         push = GetComponent<PlayerPush>();
         bat = GetComponent<PlayerBat>();
-        push.enabled = true;
-        bat.enabled = false;
+        bomb = GetComponent<PlayerBomb>();
+        wep1 = true;
+        weaponManager();
     }
 
     void Awake()
@@ -39,12 +43,21 @@ public class WeaponManager : NetworkBehaviour
         {
             wep1 = true;
             wep2 = false;
+            wep3 = false;
             weaponManager();
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
             wep1 = false;
             wep2 = true;
+            wep3 = false;
+            weaponManager();
+        }
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            wep1 = false;
+            wep2 = false;
+            wep3 = true;
             weaponManager();
         }
     }
@@ -55,17 +68,25 @@ public class WeaponManager : NetworkBehaviour
         {
             push.enabled = true;
             bat.enabled = false;
+            bomb.enabled = false;
+            bombModel.SetActive(false);
             batModel.SetActive(false);
         }
         if (wep2 == true)
         {
             bat.enabled = true;
             push.enabled = false;
+            bomb.enabled = false;
+            bombModel.SetActive(false);
             batModel.SetActive(true);
         }
         if (wep3 == true)
         {
-
+            bomb.enabled = true;
+            bat.enabled = false;
+            push.enabled = false;
+            bombModel.SetActive(true);
+            batModel.SetActive(false);
         }
     }
 }
