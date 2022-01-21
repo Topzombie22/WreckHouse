@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 6013041746027742430}
   - component: {fileID: -5523686592372983140}
   - component: {fileID: -7095176452403821986}
+  - component: {fileID: 7894789694266221759}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -284,3 +285,20 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &7894789694266221759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263766049978152285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ce8b8afd680cd44b25a49e925b0d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  explosionForce: 15
+  explosionRadius: 10
+  timer: 0

@@ -638,11 +638,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  explosionForce: 20
-  explosionRadius: 6
   hand: {fileID: 4359139158436678738}
   bomb: {fileID: 263766049978152285, guid: c4df7623cfbd8e946a6e40d3445c27f4, type: 3}
-  timer: 0
+  bombIgnited: 0
 --- !u!114 &1301105574885049963
 MonoBehaviour:
   m_ObjectHideFlags: 0
